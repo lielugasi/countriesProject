@@ -1,0 +1,179 @@
+* {
+    font-family: 'PT Sans Narrow', sans-serif;
+    box-sizing: border-box;
+}
+
+.center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .nav-bar {
+    background: #F1EDE4;
+    box-shadow: 0px 3px 10px 0px #000;
+}
+
+header .nav-bar nav {
+    margin-right: 64px;
+    display: flex;
+}
+
+header .nav-bar nav a {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: larger;
+    padding: 0 12px;
+    text-decoration: none;
+    color: black;
+    border-left: 2px #7d664c solid;
+}
+
+header .nav-bar nav a:first-of-type {
+    border: none;
+}
+
+header .nav-bar nav a:hover:first-of-type {
+    border: none;
+}
+
+header .nav-bar nav a:hover {
+    font-weight: bold;
+    color: #D0B694;
+    border-left: 2px #D0B694 solid;
+    transition: 100ms;
+}
+
+header .nav-bar nav a::after {
+    content: "";
+    width: 0%;
+    background: #D0B694;
+    height: 2px;
+    display: block;
+    transition: 500ms;
+}
+
+header .nav-bar nav a:hover::after {
+    width: 100%;
+}
+
+header .nav-bar .humburger {
+    display: none;
+}
+
+main {
+    justify-content: center;
+    background-image: url(images/background.jpg);
+    min-height: 450px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    padding: 24px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.info {
+    word-wrap: break-word;
+    background: #f4f2efb9;
+    padding: 20px;
+    font-size: larger;
+}
+
+.aside img {
+    box-shadow: 0px 3px 10px 0px #000;
+    margin-bottom: 8px;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.396);
+}
+
+.aside button {
+    font-weight: bold;
+}
+
+.aside button:hover {
+    background: #F1EDE4;
+}
+
+.aside {
+    width: 26%;
+    transition: all 500ms;
+}
+
+.aside:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.lank {
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.lank:hover {
+    color: blue;
+}
+
+footer {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: larger;
+    background: #F1EDE4;
+    box-shadow: 0px -1px 10px 0px #000;
+}
+
+footer .right p {
+    text-align: left;
+    margin: 8px;
+}
+
+footer nav a {
+    color: black;
+    margin-left: 8px;
+}
+
+footer nav a:hover {
+    color: #D0B694;
+}
+
+@media (max-width:769px) {
+    header .nav-bar .humburger {
+        display: block;
+    }
+
+    header .nav-bar nav {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 98px;
+        width: 30%;
+        transition: ease-in-out 1000ms;
+        text-align: center;
+        margin: 0;
+        z-index: 100;
+    }
+
+    header .nav-bar nav a {
+        display: block;
+        background: rgba(255, 255, 255, 0.816);
+        color: black;
+        padding: 8px;
+        border-left: none;
+    }
+
+    header .nav-bar nav a:hover {
+        border: none;
+    }
+
+    .aside {
+        width: 51%;
+    }
+
+    .info {
+        margin-top: 24px;
+    }
+}

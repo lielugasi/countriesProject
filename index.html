@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Atlas</title>
+    <script type="module" src="js/appCountries.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+</head>
+
+<body>
+    <header class="container-fluid sticky-top p-0">
+        <div class="nav-bar">
+            <div class="d-flex justify-content-between align-items-center py-2 px-0 px-md-4">
+                <div class="col-1 ms-0 ms-md-2">
+                    <a id="home_id" href="#"><img src="images/logo.png" alt="logo" width="50px"></a>
+                </div>
+                <nav id="nav_open" class="col-6">
+                    <a id="all_id" href="#">All Countries</a>
+                    <a id="israel_id" href="#">Israel</a>
+                    <a id="thailand_id" href="#">Thailand</a>
+                    <a id="usa_id" href="#">USA</a>
+                    <a id="france_id" href="#">France</a>
+                    <a id="uk_id" href="#">UK</a>
+
+                </nav>
+                <!-- right side of the navbar -->
+                <div class="col-4 row justify-content-between ">
+                    <!-- search country bar -->
+                    <form id="id_form" class="col-md-6">
+                        <input id="id_input" type="search" placeholder="Search Country" class="form-control">
+                    </form>
+                    <!-- sort countries bar -->
+                    <div class="col-md-6 mt-2 mt-md-0">
+                        <select id="id_select" class="form-select">
+                            <option>Sort By</option>
+                            <option value="name.common">Name</option>
+                            <option value="population">Population</option>
+                            <option value="region">Region</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- burger button -->
+                <div class="humburger col-1 ">
+                    <i id="burger_btn" class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end of header -->
+
+    <main>
+        <div id="id_loading" class="loading text-center">
+            <img src="images/loading.gif" alt="loading">
+            <p class="display-3 text-white"></p>
+        </div>
+        <div class="row justify-content-around p-0" id="id_row"></div>
+    </main>
+    <!-- end of main -->
+
+    <footer class="container-fluid">
+        <div class="row align-items-center justify-content-between px-3">
+            <div class="left col-7 col-md-6 d-flex justify-content-between align-items-center">
+                <p class="col-10 m-0"> © 2023 Liel Lugasi - FullStack Course.</p>
+            </div>
+            <div class="right col-5 col-md-5 d-flex justify-content-end">
+                <p>Follow Me:</p>
+                <div class="row justify-content-between mt-1">
+                    <nav>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-2x"
+                                aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official fa-2x"
+                                aria-hidden="true"></i></i></a>
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter-square fa-2x"
+                                aria-hidden="true"></i></i></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+</body>
+
+</html>
